@@ -50,7 +50,9 @@ Cost is the price when you use this action.Cost is not connected to any of reall
 //picture
 
 After you finish those works,let's define AI truely action.Search Event ExecuteAction in the graph.The out put pin is the GOAP Controller we are going to use,and the pawn that execute the action.
+
 **Be sure to call ActionCompleted functio at the end of your logic!If it's not about any kind of successfully execute.just tick bWasSuccessful as true.**
+
 //Picture
 
 ## Fourth Step:Config GoalSet and Actions
