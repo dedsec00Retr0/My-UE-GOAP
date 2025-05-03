@@ -1,2 +1,2 @@
-# My-UE-C-GOAP
+# My-UE-GOAP
 As Repository name said
