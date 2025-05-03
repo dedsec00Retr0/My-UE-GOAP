@@ -3,9 +3,11 @@
 This is a simple plugin to let you use Goal Oriented Action Planning AI.Follow next steps to statrt build your own GOAP AI.
 
 ##First step.Know World State
+
 First,know what is world state.world state is AI agent's subjective understanding of world.World state in RGOAP has two main elements,one is state's name,it's represent by gameplay tag,another one is a boolean.
 
 ##Second step.Goal Set
+
 Create a new blueprint class based on GoalSet.
 //picture
 
@@ -28,6 +30,7 @@ set Priority to decide goal's check order.
 //picture
 
 ##Thrid step.Action
+
 To define an action,it's the same you need to describe Precondition,when can this action be active.
 //picture
 
