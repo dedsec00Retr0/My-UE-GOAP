@@ -75,17 +75,37 @@ This is a flexible step, you can do whatever you want to update WorldState.if yo
 
 No matter how you update world state,be sure you are updating variable CurrentWorldState,you can get and set this variable as long as you have GOAP Controller.
 
+//picture
+
+There are two functions you can call to set and get AI itself world state.
+
+//picture
+
+
 ## Sixth Step:Use GOAPController
 
 Search and create GOAPController blueprint to use on your ai pawn.
 
 //picture
 
-what you need to do is add initial world state in the default class setting, category "GOAP"
+A GOAPData Component has been created previously,here you can config a data asset called "memory".
 
 //picture
 
-the last step is call TryExecutePlan every tick.
+Create data asset under the category "misc",choose data asset,choose GOAPMemory
+
+//picture
+
+Once you've done,click the memory,add initial world state in it,then config it in GOAPData component.
+
+//picture
+
+the final step is call TryExecutePlan every tick.
+
+//picture
+
+
+
 
 
 
