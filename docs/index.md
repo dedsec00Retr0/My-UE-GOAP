@@ -2,6 +2,8 @@
 
 This is a simple plugin to let you use Goal Oriented Action Planning AI.Follow next steps to statrt build your own GOAP AI.
 
+**Before that,I want to point out that this plugin is pretty primitive for now,because I make this plugin just for fun,but I want to keep improve the functionality in the future.It would be great if you guys give me suggestions.you can end me e-mail at ruaaaaaaaaa33@gmail.com.This plugin will be eternal free.**
+
 ## First step:Know World State
 
 First,know what is world state.world state is AI agent's subjective understanding of world.World state in RGOAP has two main elements,one is state's name,it's represent by gameplay tag,another one is a boolean.
