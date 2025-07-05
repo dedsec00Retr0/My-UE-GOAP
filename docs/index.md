@@ -1,3 +1,5 @@
+**Notice!!! this plugin is refactoring,the next update version might be very very different!!!**
+
 # RGOAP Documentation
 
 This is a simple plugin to let you use Goal Oriented Action Planning AI.Follow next steps to statrt build your own GOAP AI.
