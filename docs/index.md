@@ -52,10 +52,13 @@ Action is a blueprint asset,search "AI Action" in blueprint class to create one.
 <img width="460" height="382" alt="image" src="https://github.com/user-attachments/assets/62ca3d0b-7202-4f3d-9037-d418e4afe739" />
 
 
-Actions are the actual behaviors performed after the decision-making process. Each Action consists of three key components: Preconditions, Effects, and Cost.
-Preconditions: The specific requirements that the WorldState must meet for this action to be executable.
-Effects: The predicted changes to the WorldState if the action is successfully completed.
-Cost: The "weight" or effort required to perform the action. When multiple Actions can satisfy the Desired World State, the AI will prioritize the one with the lower Cost.Cost is not connected to any of really exist sources in the game,you can think it's represent how AI reluctant to this action.For example,Fire without cover action's cost is higher than fire under cover.After all,seek benefits and avoid harm is a biological instinct. 
+**Actions** are the actual behaviors performed after the decision-making process. Each Action consists of three key components: **Preconditions**, **Effects**, and **Cost**.
+
+*   **Preconditions**: The specific requirements that the WorldState must meet for this action to be executable.
+*   **Effects**: The predicted changes to the WorldState if the action is successfully completed.
+*   **Cost**: The "weight" or effort required to perform the action. When multiple Actions can satisfy the Desired World State, the AI will prioritize the one with the lower Cost.
+    *   Cost is not connected to any of really exist sources in the game, you can think it's represent how AI reluctant to this action.
+    *   For example, Fire without cover action's cost is higher than fire under cover. After all, seek benefits and avoid harm is a biological instinct.
 
 <img width="362" height="287" alt="image" src="https://github.com/user-attachments/assets/51a664c1-ec2b-45c8-90d6-e068b6089265" />
 
