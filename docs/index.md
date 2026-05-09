@@ -145,6 +145,10 @@ Because WorldStates are just **Blackboard Keys**, you can modify them from anywh
 *   `SetValueAsBool`
 *   `GetValueAsBool`
 
+<img width="328" height="285" alt="image" src="https://github.com/user-attachments/assets/72611821-8d17-4cfa-ac0d-1376771882dd" />
+
+
+
 #### Possible Update Methods:
 - **Behavior Trees/State Trees**: Use them to handle high-level logic and set keys.
 - **Tick**: For states that need constant monitoring.
