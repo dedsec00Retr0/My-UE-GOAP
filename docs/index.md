@@ -68,15 +68,15 @@ Cost: The "weight" or effort required to perform the action. When multiple Actio
 
 There are four functions you need to override/define. The first one is:
 
-
-<img width="406" height="346" alt="image" src="https://github.com/user-attachments/assets/7ca757c5-97c3-489c-9b81-a6f7f9691264" />
-
-
 1. ActivateAction
 This function handles the actual implementation of the Action's logic. Once the execution is complete, you must call the FinishExecuteAction function to return a success or failure status.
 If successful: The AI will proceed to the next Action in the plan.
 If unsuccessful: The current plan will be aborted, and the AI will initiate a re-planning process.
-> [1] [!WARNING]
+
+<img width="406" height="346" alt="image" src="https://github.com/user-attachments/assets/7ca757c5-97c3-489c-9b81-a6f7f9691264" />
+
+
+> [!WARNING]
 Critical Timing: Calling FinishExecuteAction will cause the AI to transition to the next Action immediately. The system does not check if your current Action's internal processes (such as animations or timers) have actually finished. Ensure all necessary logic is fully complete before calling this function.
 
 <img width="305" height="275" alt="image" src="https://github.com/user-attachments/assets/7ee2969c-bd8d-486f-ae7f-3aa8c1ad04cf" />
