@@ -19,6 +19,7 @@ This FName is used to link the state with a Blackboard Asset.In the Blackboard, 
 To direct the AI's behavior, you can create **GoalSet**. 
 <img width="391" height="320" alt="image" src="https://github.com/user-attachments/assets/eadbad64-1080-40e2-a8e4-196801ffee4f" />
 
+
 ### GoalSet
 A **GoalSet** is a reusable Data Asset, which means multiple characters can share the same set of goals. 
 
@@ -28,6 +29,7 @@ A **GoalSet** is a reusable Data Asset, which means multiple characters can shar
 3. In the popup window, search for and select **AI Goal Set**.
 
 <img width="352" height="301" alt="image" src="https://github.com/user-attachments/assets/4d27e60b-e568-4b37-a80f-e19c0ff9cee9" />
+
 
 A Goal consists of two parts:
 *   **Preconditions**: Requirements that must be met to start the goal.
@@ -49,6 +51,7 @@ Action is a blueprint asset,search "AI Action" in blueprint class to create one.
 
 <img width="460" height="382" alt="image" src="https://github.com/user-attachments/assets/62ca3d0b-7202-4f3d-9037-d418e4afe739" />
 
+
 Actions are the actual behaviors performed after the decision-making process. Each Action consists of three key components: Preconditions, Effects, and Cost.
 Preconditions: The specific requirements that the WorldState must meet for this action to be executable.
 Effects: The predicted changes to the WorldState if the action is successfully completed.
@@ -56,10 +59,12 @@ Cost: The "weight" or effort required to perform the action. When multiple Actio
 
 <img width="362" height="287" alt="image" src="https://github.com/user-attachments/assets/51a664c1-ec2b-45c8-90d6-e068b6089265" />
 
+
 > [!IMPORTANT]
 > **Important Note:** The **Effect** is NOT the actual change that occurs in the game world. It exists only as a "mental reference" for the AI planner to figure out which steps are needed to achieve its goal.
 
 <img width="352" height="295" alt="image" src="https://github.com/user-attachments/assets/f8b3f83c-f8cc-4072-b46a-6ef416cdd629" />
+
 
 There are four functions you need to override/define. The first one is:
 1. ActivateAction
@@ -71,13 +76,16 @@ Critical Timing: Calling FinishExecuteAction will cause the AI to transition to 
 
 <img width="406" height="346" alt="image" src="https://github.com/user-attachments/assets/7ca757c5-97c3-489c-9b81-a6f7f9691264" />
 
+
 <img width="305" height="275" alt="image" src="https://github.com/user-attachments/assets/7ee2969c-bd8d-486f-ae7f-3aa8c1ad04cf" />
+
 
 2. DeactivateAction
 This function is triggered both when an Action completes naturally and when it is interrupted/aborted. Its primary purpose is to handle cleanup logic.
 Typical Use Case: Use this to stop playing Animation Montages, clear temporary timers, or reset variables to their default state to ensure the AI is ready for its next task.
 
 <img width="358" height="278" alt="image" src="https://github.com/user-attachments/assets/eb910b2e-464d-4d74-b691-adeb2145cb09" />
+
 
 3. EvaluateCost
 By default, the Action Cost is set to -1.
@@ -86,11 +94,13 @@ Purpose: This allows you to define dynamic costs based on the current situation 
 
 <img width="322" height="250" alt="image" src="https://github.com/user-attachments/assets/599c7493-0430-473e-bd02-0cebc81406a7" />
 
+
 4. ValidateAction
 This function is called frequently while the Action is active. It continuously monitors the environment to verify whether the requirements for executing the Action are still valid.
 Functionality: If the situational conditions change and the Action can no longer be completed, this function ensures the AI can detect the failure immediately and stop the Action.
 
 <img width="702" height="509" alt="image" src="https://github.com/user-attachments/assets/95f68f2a-a4a3-450d-95be-fb482442e316" />
+
 
 That concludes everything you need to know about Actions.
 Important: For Actions to function correctly, they must be included within an AI Action Set Data Asset. The system uses this asset to identify which actions are available for the AI to choose from.
@@ -98,6 +108,7 @@ Important: For Actions to function correctly, they must be included within an AI
 ## Fourth Step:Config GoalSet and Actions
 
 <img width="325" height="227" alt="image" src="https://github.com/user-attachments/assets/17315653-0242-461b-b108-cba3adaec6d6" />
+
 
 ### Getting Started: Setup the Controller
 
@@ -116,6 +127,7 @@ If you assign the Ninja's GoalSet to the Rat, the Rat will attempt to achieve th
 This separation allows you to mix and match goals and actions across different AI agents to create diverse and unpredictable behaviors.
 
 <img width="368" height="292" alt="image" src="https://github.com/user-attachments/assets/45adb105-ee70-4406-8557-0766a71af9dc" />
+
 
 To start the AI's logic, you need to call the StartActionPlanning function at the appropriate time (e.g., on BeginPlay or when a specific event is triggered). This will prompt the AI to begin evaluating its goals and generating plans based on the current WorldState.
 
