@@ -67,6 +67,8 @@ Cost: The "weight" or effort required to perform the action. When multiple Actio
 
 
 There are four functions you need to override/define. The first one is:
+
+
 <img width="406" height="346" alt="image" src="https://github.com/user-attachments/assets/7ca757c5-97c3-489c-9b81-a6f7f9691264" />
 
 
