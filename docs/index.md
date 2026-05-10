@@ -1,4 +1,15 @@
-**Notice!!! this plugin is refactoring,the next update version might be very very different!!!**
+### ⚠️ Version 0.2 Notice
+
+This version is a **complete ground-up rewrite** and is entirely independent of V0.1.
+
+**What's new in V0.2:**
+*   **Leaner Code:** Reduced C++ classes from 12 to 7.
+*   **Lightweight:** Removed dependency on the `GameplayStateTree` module.
+*   **Ease of Use:** Integrated the **Blackboard** as the NPC's memory system—no more tedious setups.
+*   **Enhanced Logic:** Support for Action interruptions upon environmental changes and custom Action costs.
+
+> [!IMPORTANT]
+> **Disclaimer:** This is a free project. My expertise is modest, so please do not compare this with professional, paid GOAP plugins. This is ultimately a "toy" project created for experimentation.
 
 # RGOAP Documentation
 
